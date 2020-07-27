@@ -1,0 +1,7 @@
+﻿1. open project folder
+2. click 'CoreReactItemsListApp.sln' file to open the project in visual studio 2019
+3. open powershell
+4. enter in the command: cd + {the client project path}
+	e.x: cd C:\DemoProjects\CoreReactItemsListApp\CoreReactItemsListApp\itemslistclient
+5. enter the command: npm install
+6. in visaul studio click IIS Express
