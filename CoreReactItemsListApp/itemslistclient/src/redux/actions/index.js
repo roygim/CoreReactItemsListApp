@@ -5,7 +5,6 @@ export const getItems = () => dispatch => {
     fetch(url)
         .then(res => res.json())
         .then(res => {
-            debugger
             dispatch({
                 type: GET_ITEMS,
                 payload: res
@@ -28,7 +27,6 @@ export const addItems = (item) => dispatch => {
     })
         .then(res => res.json())
         .then(res => {
-            debugger
             dispatch({
                 type: Add_ITEM,
                 payload: res

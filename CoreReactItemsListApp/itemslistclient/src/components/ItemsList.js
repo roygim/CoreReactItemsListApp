@@ -10,6 +10,10 @@ class ItemsList extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
+    componentDidMount() {
+        this.props.getItems();
+    }
+
     handleClick(event) {
         this.props.getItems();
     }
