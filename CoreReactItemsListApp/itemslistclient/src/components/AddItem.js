@@ -8,6 +8,7 @@ class AddItem extends React.Component {
         super(props);
         this.state = { text: '' };
 
+        this.inputText = React.createRef();
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -19,6 +20,7 @@ class AddItem extends React.Component {
     handleSubmit(event) {
         this.props.addItems(this.state.text);
         this.setState({ text: '' });
+        this.inputText.current.focus();
         event.preventDefault();
     }
 
@@ -28,7 +30,7 @@ class AddItem extends React.Component {
                 <h2>Add Item</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <input type="text" value={this.state.text} onChange={this.handleChange} className="form-control" placeholder="Text" />
+                        <input type="text" value={this.state.text} onChange={this.handleChange} ref={this.inputText} className="form-control" placeholder="Text" />
                     </div>
                     <input type="submit" value="Add" className="btn btn-primary" />
                 </form>
